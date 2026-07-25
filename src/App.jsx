@@ -60,6 +60,8 @@ const getRouteStateFromPath = () => {
     "vitals-analytics": "vitals-analytics",
     medications: "medications",
     "medication-management": "medications",
+    appointments: "appointments",
+    telemedicine: "appointments",
     equipment: "equipment",
     "add-equipment": "add-equipment",
     "edit-equipment": "edit-equipment",

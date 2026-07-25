@@ -39,6 +39,7 @@ import ScheduleMaintenancePage from "../pages/hospital/ScheduleMaintenancePage";
 import RequestEquipmentPage from "../pages/hospital/RequestEquipmentPage";
 import VitalsAnalyticsPage from "../pages/VitalsAnalyticsPage";
 import MedicationManagementPage from "../pages/MedicationManagementPage";
+import AppointmentsPage from "../pages/AppointmentsPage";
 
 const UnauthorizedPage = ({ onNavigate, message }) => (
   <div className="min-h-screen bg-slate-900 flex items-center justify-center font-sans text-white p-6">
@@ -111,6 +112,9 @@ export default function AppRouter({ currentPage, onNavigate, pageData }) {
     case "medications":
     case "medication-management":
       return ProtectedRoute(MedicationManagementPage);
+    case "appointments":
+    case "telemedicine":
+      return ProtectedRoute(AppointmentsPage);
     case "equipment":
       return ProtectedRoute(EquipmentList);
     case "add-equipment":

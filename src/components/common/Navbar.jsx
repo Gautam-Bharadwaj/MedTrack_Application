@@ -68,6 +68,7 @@ export default function Navbar({ onNavigate, currentPage }) {
           { label: "Medication Manager", page: "medications" },
           { label: "Appointments", page: "appointments" },
           { label: "Security Audit", page: "security-audit" },
+          { label: "Medical Records", page: "medical-records" },
           { label: "Equipment", page: "equipment" },
           { label: "Maintenance", page: "maintenance" },
         ]

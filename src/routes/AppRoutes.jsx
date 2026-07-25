@@ -37,6 +37,8 @@ import AddEquipmentForm from "../pages/hospital/AddEquipmentForm";
 import EditEquipmentForm from "../pages/hospital/EditEquipmentForm";
 import ScheduleMaintenancePage from "../pages/hospital/ScheduleMaintenancePage";
 import RequestEquipmentPage from "../pages/hospital/RequestEquipmentPage";
+import VitalsAnalyticsPage from "../pages/VitalsAnalyticsPage";
+import MedicationManagementPage from "../pages/MedicationManagementPage";
 
 const UnauthorizedPage = ({ onNavigate, message }) => (
   <div className="min-h-screen bg-slate-900 flex items-center justify-center font-sans text-white p-6">
@@ -100,9 +102,15 @@ export default function AppRouter({ currentPage, onNavigate, pageData }) {
     case "reset-password":
       return <ResetPasswordPage onNavigate={onNavigate} />;
 
-    // --- Protected Routes: Hospital Admin ---
+    // --- Protected Routes: Hospital Admin & Vitals ---
     case "dashboard":
       return ProtectedRoute(Dashboard);
+    case "vitals":
+    case "vitals-analytics":
+      return ProtectedRoute(VitalsAnalyticsPage);
+    case "medications":
+    case "medication-management":
+      return ProtectedRoute(MedicationManagementPage);
     case "equipment":
       return ProtectedRoute(EquipmentList);
     case "add-equipment":

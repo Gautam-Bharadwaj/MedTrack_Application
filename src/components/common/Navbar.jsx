@@ -64,6 +64,8 @@ export default function Navbar({ onNavigate, currentPage }) {
     ? user.role === "hospital"
       ? [
           { label: "Dashboard", page: "dashboard" },
+          { label: "Vitals Analytics", page: "vitals-analytics" },
+          { label: "Medication Manager", page: "medications" },
           { label: "Equipment", page: "equipment" },
           { label: "Maintenance", page: "maintenance" },
         ]

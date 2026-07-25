@@ -67,6 +67,7 @@ export default function Navbar({ onNavigate, currentPage }) {
           { label: "Vitals Analytics", page: "vitals-analytics" },
           { label: "Medication Manager", page: "medications" },
           { label: "Appointments", page: "appointments" },
+          { label: "Security Audit", page: "security-audit" },
           { label: "Equipment", page: "equipment" },
           { label: "Maintenance", page: "maintenance" },
         ]

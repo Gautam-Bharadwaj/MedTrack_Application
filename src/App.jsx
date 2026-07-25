@@ -62,6 +62,8 @@ const getRouteStateFromPath = () => {
     "medication-management": "medications",
     appointments: "appointments",
     telemedicine: "appointments",
+    "security-audit": "security-audit",
+    "audit-logs": "security-audit",
     equipment: "equipment",
     "add-equipment": "add-equipment",
     "edit-equipment": "edit-equipment",

@@ -125,13 +125,6 @@ public class SecurityConfig {
                     "/api/auth/forgot-password",
                     "/api/auth/verify-otp",
                     "/api/auth/reset-password",
-                    "/api/auth/authority/**",
-                    "/api/auth/mfa/**",
-                    "/api/auth/devices/**",
-                    "/api/auth/sso/**",
-                    "/api/auth/audit/**",
-                    "/api/auth/rbac/**",
-                    "/api/auth/zerotrust/**",
                     "/h2-console/**",
                     "/error",
                     "/v3/api-docs/**",
@@ -160,6 +153,10 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/auth/sso/toggle/**").hasRole("HOSPITAL")
                 .requestMatchers(HttpMethod.GET, "/api/auth/sso/**").authenticated()
                 .requestMatchers("/api/auth/audit/**").authenticated()
+                .requestMatchers(HttpMethod.PUT, "/api/auth/zerotrust/policy").hasRole("HOSPITAL")
+                .requestMatchers(HttpMethod.POST, "/api/auth/zerotrust/unblock").hasRole("HOSPITAL")
+                .requestMatchers(HttpMethod.POST, "/api/auth/zerotrust/record-failed").hasRole("HOSPITAL")
+                .requestMatchers(HttpMethod.GET, "/api/auth/zerotrust/**").authenticated()
 
                 // Equipment module boundaries:
                 // GET requests: Authorized users.
